@@ -1,0 +1,138 @@
+*{
+    margin: 0;padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.h{
+    background-color: #DF3C5F;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: white ;
+}
+h1{
+    color:  #224193;
+}
+.gamecontainer{
+/* background-color: aqua; */
+display: flex;
+justify-content: center;
+margin-top: 50px;
+
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    position: relative;
+    background-color: #6F9BD1;
+}
+.box{
+    border: 2px solid white;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color:  #224193;
+    cursor: pointer;
+    color: white;
+}
+.gameinfo{
+    padding: 0px 34px;
+    height: 50vh;
+    position: relative;
+}
+img{
+    left:40px ;
+    height: 0;
+    transition-property: height 2s linear;
+    position: absolute;
+    
+}
+.imgbox{
+    top: 140px;
+    position: absolute;
+}
+.br-0{
+    border-right: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.info{
+    top: 61px;
+    font-size: 20px;
+    position: absolute;
+    left: 170px;
+    color: #DF3C5F;
+    font-weight: bold;
+}
+#reset{
+    padding: 8px 19px;
+    font-weight: bold;
+    background-color: #DF3C5F;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    position: absolute;
+    top: 100px;
+    left: 172px;
+    cursor: pointer;
+    box-shadow: 3px 3px  #224193;
+    
+}
+.line{
+    width: 0;
+    height: 3px;
+    position:absolute;
+    left: 300px;
+    transition: width 1s ease-in-out;
+    z-index: 2;
+    background-color: #DF3C5F;
+}
+@media screen and (max-width:800px) {
+    .gamecontainer{
+      
+        flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 68px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3,16vw);
+        grid-template-rows: repeat(3,16vw);
+    }
+    img{
+        height: 269px;
+        left: 20px;
+        top: 30px
+    }
+    #reset{
+        top: 110px;
+        left: 141px;
+    }
+    .info{
+        left: 137px;
+    }
+    .line{
+        
+    /* width: 47vw; */
+    height: 3px;
+    position: absolute;
+    left: 160px;
+    }
+}
